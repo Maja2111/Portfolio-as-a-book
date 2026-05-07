@@ -1,0 +1,46 @@
+@import ''
+
+$gradient-start: #ff4b91; // Pink
+$gradient-end: #ff805d;   // Orange-Peach
+$text-white: #ffffff;
+$transition-speed: 0.3s;
+
+
+.next-button { // Struktur & Form
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 35px;
+  border: none;
+  color: $text-white;
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+  position: relative;
+  transition: transform $transition-speed ease; // Vorbereitung für den Zoom
+
+  // Der Farbverlauf aus deinem Bild
+  background: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%);
+
+  // Die asymmetrische Form (oben links abgerundet, unten rechts schräg)
+  // Tipp: clip-path ist perfekt für solche Custom-Shapes
+  border-radius: 20px 0 20px 0; 
+  // Alternativ für exakt das Bild-Design:
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+  // Der Hover-Effekt: "Nach innen zoomen"
+  &:hover {
+    // scale(0.95) sorgt dafür, dass der Button beim Drüberfahren kleiner wird
+    transform: scale(0.95);
+    filter: brightness(1.1); // Macht ihn beim Hover minimal heller
+  }
+
+  // Wenn der Button auf der letzten Buchseite deaktiviert ist
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: scale(1);
+    clip-path: none;
+    border-radius: 5px;
+  }
+}
