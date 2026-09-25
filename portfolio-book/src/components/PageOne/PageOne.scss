@@ -1,0 +1,38 @@
+// Farben & Variablen
+$paper-bg: #fdfbf7;      // Weicher Papier-Farbton
+$text-main: #2b2b2b;     // Dunkles Anthrazit für gute Lesbarkeit
+$accent-color: #ff4b91;  // Passend zu deinem Button-Verlauf
+
+.page-one {
+  background-color: $paper-bg;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); // Sanfter Buchseiten-Schatten
+  max-width: 500px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // Verschachtelung (Nesting) in Sass
+  .page-title {
+    font-size: 2rem;
+    color: $text-main;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid $accent-color;
+    padding-bottom: 0.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: lighten($text-main, 20%);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-main;
+  }
+}

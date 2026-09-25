@@ -1,15 +1,13 @@
-import './App.css'
-import { useState } from 'react'
+import PageOne from "./components/PageOne/PageOne";
+import './App.css';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <PageOne /> //hier wird die Komponente PageOne eingebunden und gerendert
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

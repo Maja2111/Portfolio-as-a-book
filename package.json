@@ -5,5 +5,8 @@
     "intlayer": "^7.3.9",
     "react-i18next": "^17.0.3",
     "react-intlayer": "^7.3.9"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.105.0"
   }
 }
