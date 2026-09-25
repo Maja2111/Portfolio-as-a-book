@@ -1,0 +1,24 @@
+[
+  {
+    "key": "nextButton",
+    "content": {
+      "label": {
+        "nodeType": "translation",
+        "translation": {
+          "de": "Nächste Seite",
+          "en": "Next Page"
+        }
+      },
+      "ariaLabel": {
+        "nodeType": "translation",
+        "translation": {
+          "de": "Nächste Seite anzeigen",
+          "en": "Show next page"
+        }
+      }
+    },
+    "location": "local",
+    "localId": "nextButton::local::src\\components\\nextButton\\nextButton.content.ts",
+    "filePath": "src\\components\\nextButton\\nextButton.content.ts"
+  }
+]
